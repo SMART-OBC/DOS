@@ -1,7 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_schaal_configuration,access.schaal.configuration,model_schaal_configuration,,1,1,1,1
-access_schaal_values_line,access.schaal.values.line,model_schaal_values_line,,1,1,1,1
-access_employee_formatiepunten,access.employee.formatiepunten,model_employee_formatiepunten,,1,1,1,1
-
-
-
