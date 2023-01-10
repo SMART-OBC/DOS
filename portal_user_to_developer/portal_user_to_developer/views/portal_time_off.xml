@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--action-->
+    <!--    form view-->
+    <record id="portal_time_off_form" model="ir.ui.view">
+        <field name="name">portal_time_off_form</field>
+        <field name="model">portal.time.off</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm" data-hotkey="v" string="Confirm" type="object"
+                             groups="base.group_user" attrs="{'invisible':[('hr_leave_id','>','0')]}"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="time_off_type"/>
+                            <field name="user_id" invisible="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                             <field name="employee_id"/>
+                            <field name="name"/>
+                            <field name="number_of_days"/>
+                        </group>
+                        <group>
+                            <field name="request_date_from" />
+                            <field name="request_date_to"/>
+                            <field name="hr_leave_id" invisible="1"/>
+                            <field name="hr_bool" invisible="1"/>
+                            <field name="attachment" widget="many2many_binary" class="oe_inline"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="portal_time_off_tree" model="ir.ui.view">
+        <field name="name">portal_time_off_tree</field>
+        <field name="model">portal.time.off</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id"/>
+                <field name="time_off_type"/>
+                <field name="name"/>
+                <field name="request_date_from"/>
+                <field name="request_date_to"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <record id="portal_time_off_action" model="ir.actions.act_window">
+        <field name="name">Portal Time off</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">portal.time.off</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create!
+            </p>
+        </field>
+    </record>
+    <menuitem id="portal_time_off_root"
+              name="Portal Time Off"
+              parent="employee_hub_root"
+              action="portal_time_off_action"
+              sequence="11"/>
+
+</odoo>
