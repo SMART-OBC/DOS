@@ -1,8 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_employee_hub,access.employee.hub,model_employee_hub,,1,1,1,1
-access_portal_time_off,access.portal.time.off,model_portal_time_off,,1,1,1,1
-access_time_off_type,access.time.off.type,model_time_off_type,,1,1,1,1
-access_working_time,access.working.time,model_working_time,,1,1,1,1
-access_employee_request,access.employee_request.type,model_employee_request,,1,1,1,1
-
-
