@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-inherit="documents.DocumentsInspector.documentsInfo" t-inherit-mode="extension">
+        <xpath expr="//tbody" position="inside">
+            <t t-call="documents.DocumentsInspector.field">
+                <t t-set="field">payslip_date</t>
+                <t t-set="additionalProps"/>
+            </t>
+            <t t-call="documents.DocumentsInspector.field">
+                <t t-set="field">employee_id</t>
+                <t t-set="additionalProps" />
+            </t>
+            <t t-call="documents.DocumentsInspector.field">
+                <t t-set="field">id_nr</t>
+                <t t-set="additionalProps" />
+            </t>
+    </xpath>
+    </t>
+</templates>
